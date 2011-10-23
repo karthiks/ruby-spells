@@ -6,8 +6,13 @@ class SmartDataSourceClient
 
   def initialize data_source
     @data_source = data_source
+
+    ref = class << self
+      puts "'self' inside class extension definition --> #{self}"
+      self
+    end
+
     data_source.public_methods(false).each do |meth|
-      ref = (class << self; puts "'self' inside class extension definition --> #{self}"; self; end)
       ref.class_eval do
         define_method meth do 
           data_source.send "#{meth}"

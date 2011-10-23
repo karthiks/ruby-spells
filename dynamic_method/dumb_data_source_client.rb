@@ -1,5 +1,7 @@
 #! ruby dumb_data_source_client.rb
 
+require File.expand_path File.join(File.dirname(__FILE__), 'data_source')
+
 class DumbDataSourceClient
 
   def initialize(data_source)
@@ -23,3 +25,9 @@ class DumbDataSourceClient
   end
 
 end
+
+ds = DataSource.new
+
+dumb_client = DumbDataSourceClient.new ds
+dumb_client.method_1
+dumb_client.method_N

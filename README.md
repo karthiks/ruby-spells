@@ -4,3 +4,9 @@ Each spell or meta-programming technique will be placed in a folder/directory of
 
 Table Of Contents
 Oh, com'on!, just peruse through the directory listings of the project and you'll get an idea :P
+
+
+References:
+1. Meta-Programming Ruby by Paulo ...
+2. http://www.raulparolari.com/Ruby2/define_method (Nice article)
+3. 
